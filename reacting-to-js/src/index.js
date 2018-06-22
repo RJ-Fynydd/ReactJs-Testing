@@ -3,6 +3,7 @@ import { render } from 'react-dom'
 import { App } from './components/App'
 import { Whoops404 } from './components/Whoops404'
 import { Router, Route, Redirect, hashHistory } from 'react-router'
+import $ from 'jquery'
 
 window.React = React
 

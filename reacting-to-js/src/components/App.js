@@ -1,5 +1,6 @@
 import { Component } from 'react'
-import { JaleeDateCount } from './JaleeDateCount'
+import { HomeHeader } from './HomeHeader'
+import { HomeContent } from './HomeContent'
 import '../stylesheets/style.scss'
 
 
@@ -8,7 +9,6 @@ export class App extends Component {
 
     constructor(props) {
         super(props)
-
         this.state = {
 
         }
@@ -18,7 +18,8 @@ export class App extends Component {
     render() {
         return (
             <div className="app">
-                <JaleeDateCount />
+                <HomeHeader headerText="Welcome!" />
+                <HomeContent />
             </div>
         )
     }
