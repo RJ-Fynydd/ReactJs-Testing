@@ -1,0 +1,23 @@
+$text-color: indigo;
+$background-color: white;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    background-color: $background-color;
+}
+
+.sum-text {
+        margin: 0 auto;
+        font-size: 160pt;
+        text-align: center;
+        color: $text-color;
+}
