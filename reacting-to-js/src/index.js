@@ -1,20 +1,16 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { JaleeDateCount } from './components/JaleeDateCount'
+import { App } from './components/App'
+import { Whoops404 } from './components/Whoops404'
+import { Router, Route, Redirect, hashHistory } from 'react-router'
 
 window.React = React
 
 render(
-    <div>
-        {
-        (function () {
-            var data = [];
-        for (var i = 0; i < 20; i++) {
-            data.push(<JaleeDateCount index={i} />);
-        }
-        return data;
-    }())
-}
-    </div>,
+    <Router history={hashHistory}>
+        <Route path='/' component={App} />
+        <Route path='/404' component={Whoops404} />
+        <Redirect from='*' to='/404' />
+    </Router>,
     document.getElementById('root')
 )

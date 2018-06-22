@@ -6,9 +6,25 @@ $background-color: white;
     padding: 0;
 }
 
-body, html {
+body {
+    margin: 0;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+    overflow: auto;
+    min-height: 100%;
+}
+
+html, body {
+    height: 100%;
+}
+
+#root {
+    position: absolute;
     width: 100%;
     height: 100%;
+    min-height: 400px;
+    top: 0;
+    margin: 0;
 }
 
 .container {
@@ -16,8 +32,20 @@ body, html {
 }
 
 .sum-text {
-        margin: 0 auto;
-        font-size: 160pt;
+    margin: 15px auto 15px auto;
+    font-size: 160pt;
+    text-align: center;
+    color: $text-color;
+}
+
+.notFound {
+    margin: 0 auto;
+    background-color: #3a3a3a;
+    width: 100%;
+    height: 100%;
+
+    h1 {
         text-align: center;
-        color: $text-color;
+        color: #3399ff;
+    }
 }
