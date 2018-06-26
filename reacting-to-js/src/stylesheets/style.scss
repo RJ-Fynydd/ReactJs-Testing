@@ -26,7 +26,7 @@ html, body {
 
 
 $bg-color: #3a3a3a;
-$txt-color: #3399ff;
+$txt-color: #ffffff;
 .home {
     margin: 0 auto;
     background-color: $bg-color;
@@ -51,12 +51,13 @@ $txt-color: #3399ff;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-content: flex-start;
+    align-content: center;
+
 }
 
 .content-box {
     max-width: 500px;
-    margin: 10px;
+    margin: 10px auto;
     padding: 10px;
     background-color: $bg-color;
     border-radius: 15px;
