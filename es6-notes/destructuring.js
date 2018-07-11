@@ -20,12 +20,15 @@ var myObject = {
     var2: "I am variable two!",
     otherVar: "NuLl"
 }
-function testingObjDest({ var1, var2 }) {
+// If var1 is undefined then it stays it's default of 25.  Also var2 will be passed in as var2 but will be newVar2Name in the function.
+function testingObjDest({ var1 = 25, var2: newVar2Name }) {
     console.log(var1);      // Returns "I am variable one!"
-    console.log(var2);      // Returns "I am variable two!"
+    console.log(newVar2Name);      // Returns "I am variable two!"
     //console.log(otherVar);  // Returns undefined
 }
 testingObjDest(myObject);   // ^^^
+// Or pass in object in any Order
+testingObjDest({ var2, var1 });
 
 // Same with arrays
 var myArray = [
@@ -48,6 +51,4 @@ var obj = {
     bar: 1,
     foo     // Same as "foo: foo" | variable name must be the same as object property.
 }
-
-
 // ---------- END OF Destructuring ----------

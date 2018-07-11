@@ -26,16 +26,19 @@ var myObject = {
     var1: "I am variable one!",
     var2: "I am variable two!",
     otherVar: "NuLl"
-};
-function testingObjDest(_ref) {
-    var var1 = _ref.var1,
-        var2 = _ref.var2;
+    // If var1 is undefined then it stays it's default of 25.  Also var2 will be passed in as var2 but will be newVar2Name in the function.
+};function testingObjDest(_ref) {
+    var _ref$var = _ref.var1,
+        var1 = _ref$var === undefined ? 25 : _ref$var,
+        newVar2Name = _ref.var2;
 
     console.log(var1); // Returns "I am variable one!"
-    console.log(var2); // Returns "I am variable two!"
+    console.log(newVar2Name); // Returns "I am variable two!"
     //console.log(otherVar);  // Returns undefined
 }
 testingObjDest(myObject); // ^^^
+// Or pass in object in any Order
+testingObjDest({ var2: var2, var1: var1 });
 
 // Same with arrays
 var myArray = ["I am index zero!", "I am index one!", "NuLl"];
@@ -46,6 +49,18 @@ function testingArrayDest(_ref2) {
 
     console.log(index1); // Returns "I am index zero!"
     console.log(index2); // Returns "I am index one!"
-    console.log(index3); // Returns undefined
+    //console.log(index3);      // Returns undefined
 }
 testingArrayDest(myArray); // ^^^
+
+
+// Destructuring into objects
+var foo = 2;
+
+var obj = {
+    bar: 1,
+    foo: foo // Same as "foo: foo" | variable name must be the same as object property.
+
+    // ---------- END OF Destructuring ----------
+
+};
