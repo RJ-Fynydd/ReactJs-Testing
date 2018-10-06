@@ -1,11 +1,60 @@
 @import 'colors';
 
-$theme-font: verdana, sans-serif;
+$theme-font: verdana,
+sans-serif;
 
 body {
     font: $theme-font;
-    background-color: $themeColor-Light;
-    h1, h2 {
+
+    margin: 0;
+    background-color: $themeColor-BG;
+    width: 100%;
+    height: 100%;
+
+    h1,
+    h2 {
         color: $themeColor-Dark;
+        text-align: center;
+    }
+}
+
+
+.navbar-logo {
+    max-height: 40px;
+    padding: 0;
+}
+
+
+.container-override {
+
+    padding: 0;
+
+    .navbar-brand {
+        margin-right: 0;
+    }
+
+    .navbar-toggler {
+        padding: 4px;
+    }
+
+}
+
+
+// Colors
+.logoColor {
+    &.red {
+        color: $logo-red;
+    }
+
+    &.yellow {
+        color: $logo-yellow;
+    }
+
+    &.light-blue {
+        color: $logo-light-blue;
+    }
+
+    &.dark-blue {
+        color: $logo-dark-blue;
     }
 }
