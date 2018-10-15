@@ -1,16 +1,13 @@
 @import 'colors';
 
-$theme-font: verdana,
-sans-serif;
+$theme-font: verdana, sans-serif;
 
 body {
     font: $theme-font;
 
     margin: 0;
     background-color: $themeColor-BG;
-    width: 100%;
-    height: 100%;
-
+    
     h1,
     h2 {
         color: $themeColor-Dark;
@@ -24,24 +21,11 @@ body {
     padding: 0;
 }
 
-
-.container-override {
-
-    padding: 0;
-
-    .navbar-brand {
-        margin-right: 0;
-    }
-
-    .navbar-toggler {
-        padding: 4px;
-    }
-
-}
-
-
 // Colors
 .logoColor {
+    font: $theme-font;
+    font-weight: bold;
+
     &.red {
         color: $logo-red;
     }
@@ -57,4 +41,18 @@ body {
     &.dark-blue {
         color: $logo-dark-blue;
     }
+}
+
+.container-override {
+
+    padding: 0;
+
+    .navbar-brand {
+        margin-right: 0;
+    }
+
+    .navbar-toggler {
+        padding: 4px;
+    }
+
 }
